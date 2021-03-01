@@ -17,17 +17,15 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.stream.Collectors;
-
 @RestController
 @Slf4j
 public class LoginController {
 
     @GetMapping("/login")
-    public Object login(@Validated User user, BindingResult result) {
-        if (result.hasErrors()) {
-            return result.getAllErrors().stream().map(ObjectError::getDefaultMessage).collect(Collectors.toList());
-        }
+    public Object login(@Validated User user) {
+//        if (result.hasErrors()) {
+//            return result.getAllErrors().stream().map(ObjectError::getDefaultMessage).collect(Collectors.toList());
+//        }
 
         if (StringUtils.isEmpty(user.getUserName()) || StringUtils.isEmpty(user.getPassword())) {
             return "请输入用户名和密码！";

@@ -16,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(BindException.class)
-    public Object validExceptionHandler(BindException e) {
-        FieldError fieldError = e.getBindingResult().getFieldError();
-        assert fieldError != null;
-        log.error(fieldError.getField() + ":" + fieldError.getDefaultMessage());
-        // 将错误的参数的详细信息封装到统一的返回实体
-        return fieldError.getField() + ":" + fieldError.getDefaultMessage();
-    }
+//    @ExceptionHandler(BindException.class)
+//    public Object validExceptionHandler(BindException e) {
+//        FieldError fieldError = e.getBindingResult().getFieldError();
+//        assert fieldError != null;
+//        log.error(fieldError.getField() + ":" + fieldError.getDefaultMessage());
+//        // 将错误的参数的详细信息封装到统一的返回实体
+//        return fieldError.getField() + ":" + fieldError.getDefaultMessage();
+//    }
 
 
     @ExceptionHandler

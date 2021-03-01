@@ -1,3 +1,13 @@
 server:
   port: 8080
 
+spring:
+  application:
+    name: cloud-spring-shiro
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #配置Nacos地址
+
+service-url: cloud-app-cluster

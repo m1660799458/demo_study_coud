@@ -8,10 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class SpringShiro {
+public class AppTwo {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringShiro.class, args);
+        SpringApplication.run(AppTwo.class, args);
     }
 
 }
