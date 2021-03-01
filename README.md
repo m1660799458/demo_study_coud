@@ -1,1 +1,1 @@
-# demo_styudy_coud
+# demo_study_coud
